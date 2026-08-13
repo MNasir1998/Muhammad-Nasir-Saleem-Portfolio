@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nasir Saleem — Business Development &amp; Sales Closer</title>
+<meta name="description" content="Muhammad Nasir Saleem — Business Development &amp; Sales. $180K+ closed on Upwork. Deal architect for IT and gaming studios." />
+
+<meta property="og:title" content="Nasir Saleem — Business Development &amp; Sales Closer" />
+<meta property="og:description" content="$180K+ closed. Pipelines built. Deals delivered." />
+<meta property="og:image" content="assets/profile.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="glowfield"></canvas>
+<div class="grain"></div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ================= NAV ================= -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">NASIR<span class="brand-dot">.</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">whoami</a>
+      <a href="#toolkit">tools</a>
+      <a href="#experience">log</a>
+      <a href="#deals">repos</a>
+      <a href="#faq">faq</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-line" href="https://drive.google.com/drive/folders/1M3LeEhLqrl8HLosKtw8gy68Z3dIzZxoH?usp=sharing" target="_blank" rel="noopener">My CV ↗</a>
+      <a class="btn btn-solid" href="#contact">Book a call</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+
+      <div class="hero-left reveal">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="terminal-title">README.md</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="tk-muted">$</span> <span class="tk-fn">cat</span> <span class="tk-str">README.md</span></p>
+            <p class="tline">Hi, I'm <span class="wave">👋</span> <span class="tk-name">Nasir Saleem</span> <span class="heart">🤝</span></p>
+            <p class="tline"><span class="tk-key">const</span> <span class="tk-var">role</span> <span class="tk-op">=</span> <span class="tk-str">"Business Development · Sales Closer"</span>;</p>
+            <p class="tline typing-line">
+              <span class="tk-key">const</span> <span class="tk-var">focus</span> <span class="tk-op">=</span>
+              <span class="tk-str" id="typedTarget"></span><span class="cursor">▌</span>;
+            </p>
+            <p class="tline tk-comment">// I don't watch the deal close itself. I close the deal.</p>
+          </div>
+        </div>
+
+        <div class="hero-badges">
+          <span>OPEN TO WORK</span>
+          <span class="badge-loc">📍 LAHORE, PK</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#deals" class="btn btn-solid btn-lg">View my repos ↓</a>
+          <a href="https://drive.google.com/drive/folders/1M3LeEhLqrl8HLosKtw8gy68Z3dIzZxoH?usp=sharing" target="_blank" rel="noopener" class="btn btn-line btn-lg">Here's my CV ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="id-card">
+          <div class="id-card-strap">
+            <span>CLOSER</span>
+            <span>BD</span>
+          </div>
+          <div class="id-card-clip"><i></i></div>
+          <div class="id-card-body">
+            <div class="id-card-header">BUSINESS DEVELOPMENT ID</div>
+            <div class="id-card-photo-wrap">
+              <img src="assets/profile.jpg" alt="Nasir Saleem" class="id-card-photo" />
+            </div>
+            <div class="id-card-name">NASIR SALEEM</div>
+            <div class="id-card-role">Business Development · Sales Closer</div>
+            <div class="id-card-divider"></div>
+            <div class="id-card-row"><span>ID NO.</span><span>BD-2026-0180K</span></div>
+            <div class="id-card-row"><span>LOCATION</span><span>Lahore, Pakistan</span></div>
+            <div class="id-card-row"><span>STATUS</span><span>Open to Work</span></div>
+            <div class="id-card-row"><span>CLEARANCE</span><span id="cardClearance">$180K+ Closed</span></div>
+            <div class="id-card-barcode" aria-hidden="true"></div>
+            <div class="id-card-footline">NASIR-SALEEM-BD-CLOSER</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TRUST STRIP ================= -->
+  <section class="trust-strip">
+    <div class="wrap trust-inner reveal">
+      <div class="trust-figure">
+        <span class="trust-num" data-count="180" data-prefix="$" data-suffix="K+">$0</span>
+        <span class="trust-label">closed lifetime</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-marquee">
+        <div class="trust-track" id="companyTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHOAMI / ABOUT ================= -->
+  <section class="numbered-section" id="about">
+    <div class="wrap">
+      <div class="glow-card reveal">
+        <div class="glow-card-head">
+          <span class="glow-eyebrow">$ whoami</span>
+          <span class="glow-index">01</span>
+        </div>
+        <h2 class="glow-title">ABOUT ME</h2>
+        <div class="about-body">
+          <ul class="about-list">
+            <li><span class="emoji">💼</span> Business Development &amp; Sales professional — <strong>4+ years</strong> turning Upwork and LinkedIn into signed contracts</li>
+            <li><span class="emoji">💰</span> <strong>$180,000+</strong> closed lifetime across IT and gaming outsourcing</li>
+            <li><span class="emoji">🖥️</span> Background in Computer Science — I understand what I sell well enough to scope it honestly</li>
+            <li><span class="emoji">🚀</span> Currently closing deals at <strong>Hubextech</strong> — $60,000+ closed and counting</li>
+            <li><span class="emoji">🏆</span> Recognized <strong>Employee of the Month</strong> at Narsun Studios (Jan 2023)</li>
+            <li><span class="emoji">📫</span> Reach me: <strong>malikmuhammadnasir12@gmail.com</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLKIT ================= -->
+  <section class="numbered-section" id="toolkit">
+    <div class="wrap">
+      <div class="glow-card reveal">
+        <div class="glow-card-head">
+          <span class="glow-eyebrow">$ ls tools/</span>
+          <span class="glow-index">02</span>
+        </div>
+        <h2 class="glow-title">TOOLKIT</h2>
+
+        <div class="skill-matrix">
+          <div class="skill-group">
+            <span class="skill-group-label">Outbound</span>
+            <div class="chip-row">
+              <span>Lead Generation</span><span>Cold Outreach</span><span>Email Marketing</span><span>Copywriting</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Deal-making</span>
+            <div class="chip-row">
+              <span>Proposal Writing</span><span>Bidding</span><span>Negotiation</span><span>B2B Sales</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Platforms</span>
+            <div class="chip-row">
+              <span>Upwork</span><span>Fiverr</span><span>LinkedIn Sales Navigator</span><span>HubSpot</span><span>Salesforce</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <span class="skill-group-label">Data &amp; ops</span>
+            <div class="chip-row">
+              <span>Apollo</span><span>Snov.io</span><span>Waalaxy</span><span>FindThatLead</span><span>Phantombuster</span><span>ClickUp</span><span>Jira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="numbered-section">
+    <div class="wrap">
+      <div class="glow-card reveal">
+        <div class="glow-card-head">
+          <span class="glow-eyebrow">$ pipeline --stats</span>
+          <span class="glow-index">03</span>
+        </div>
+        <h2 class="glow-title">DEAL STATS &amp; GRAPHS</h2>
+
+        <div class="stat-quad">
+          <div class="stat-block">
+            <span class="stat-block-num" data-count="180" data-prefix="$" data-suffix="K+">$0</span>
+            <span class="stat-block-label">Revenue closed</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block-num" data-count="9" data-suffix="+">0</span>
+            <span class="stat-block-label">Long-term deals delivered</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block-num" data-count="4" data-suffix="+">0</span>
+            <span class="stat-block-label">Years closing deals</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-block-num" data-count="100" data-suffix="+">0</span>
+            <span class="stat-block-label">Qualified leads / month, peak</span>
+          </div>
+        </div>
+
+        <div class="bar-chart">
+          <p class="bar-chart-title">🏆 Top Platforms by Revenue</p>
+          <div class="bar-row">
+            <span class="bar-label">Upwork</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:86%"></div></div>
+            <span class="bar-pct">86%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">LinkedIn Outreach</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:22%"></div></div>
+            <span class="bar-pct">22%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Retainer Clients</span>
+            <div class="bar-track"><div class="bar-fill" style="--w:11%"></div></div>
+            <span class="bar-pct">11%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEAL LEDGER MARQUEE ================= -->
+  <section class="ledger">
+    <p class="ledger-label wrap"><span>$ tail -f deals.log</span> — every line below is a deal that closed</p>
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNATURE DEALS (repo cards) ================= -->
+  <section class="projects" id="deals">
+    <div class="wrap">
+      <h2 class="section-title reveal">📦 Signature Deals</h2>
+      <p class="section-lede reveal">Long-term projects sourced, negotiated, and run to delivery — styled like the repos they'd live in.</p>
+
+      <div class="repo-grid">
+        <div class="repo-card repo-card--feature reveal">
+          <div class="repo-top">
+            <span class="repo-icon">📌</span>
+            <span class="repo-name">masked-singer-game</span>
+            <span class="repo-visibility">Public</span>
+          </div>
+          <p class="repo-desc">The Masked Singer Game &amp; Companion Title — secured via Upwork, ran point as Project Manager coordinating developers and client through daily communication.</p>
+          <div class="repo-foot">
+            <span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span>
+            <span class="repo-stat">💵 $80,000</span>
+            <span class="repo-stat">🏷️ Project Manager</span>
+          </div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🛒</span><span class="repo-name">shopify-dropship-app</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Custom Shopify Dropship App — sourced the project, then acted as primary point of contact between client and dev team.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span><span class="repo-stat">💵 $17,000+</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🌐</span><span class="repo-name">metaverse-project</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Generated the lead directly through LinkedIn outreach and stayed primary point of contact through the build.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#9B5CFF"></i>LinkedIn</span><span class="repo-stat">💵 $15,000</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🎮</span><span class="repo-name">nes-game-copy</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Generated and managed project workflow and client communication from pitch to handoff.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span><span class="repo-stat">💵 $13,000</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🎓</span><span class="repo-name">education-game-dev</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Secured project via Upwork; managed end-to-end communication and delivery workflow.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span><span class="repo-stat">💵 $12,000</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🌯</span><span class="repo-name">shawarma-master</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Managed communication and project workflow, tracking milestones and client updates throughout.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#5CE1FF"></i>Retainer</span><span class="repo-stat">💵 $8,000</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">👑</span><span class="repo-name">coin-master-reskin</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Secured via Upwork; owned end-to-end communication and project workflow.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span><span class="repo-stat">💵 $5,000</span></div>
+        </div>
+
+        <div class="repo-card reveal">
+          <div class="repo-top"><span class="repo-icon">🛍️</span><span class="repo-name">dulora-shopify-store</span><span class="repo-visibility">Public</span></div>
+          <p class="repo-desc">Generated the project and documented client requirements, coordinating updates throughout.</p>
+          <div class="repo-foot"><span class="repo-lang"><i style="--dot:#2F7FFF"></i>Upwork</span><span class="repo-stat">💵 $35/hr</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE (commit log style) ================= -->
+  <section class="experience" id="experience">
+    <div class="wrap">
+      <h2 class="section-title reveal">$ career <em>--log</em></h2>
+      <p class="section-lede reveal">Five roles. One throughline: find the client, close the client, keep the client.</p>
+
+      <div class="timeline">
+        <article class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Business Development Executive</h3>
+              <span class="tl-company">Hubextech</span>
+              <span class="tl-date">Apr 2025 — Present</span>
+            </div>
+            <ul>
+              <li>Manage and optimize company Upwork and LinkedIn profiles to attract high-intent, well-qualified clients.</li>
+              <li>Closed <strong>$60,000+</strong> in revenue via Upwork and generated 4 qualified LinkedIn leads.</li>
+              <li>Own bidding, negotiation, and client communication end to end.</li>
+              <li>Test and refine outreach frameworks and proposal structures to improve response and win rates.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Business Development Executive</h3>
+              <span class="tl-company">The Game Storm Studios</span>
+              <span class="tl-date">Apr 2024 — Jan 2025</span>
+            </div>
+            <ul>
+              <li>Generated <strong>$90,000+</strong> in revenue from Upwork using a single profile.</li>
+              <li>Acted as coordinator between clients and developers for smooth, on-time delivery.</li>
+              <li>Performed competitive market research to surface new business opportunities.</li>
+              <li>Scraped and analyzed data to power the lead generation pipeline.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Business Development Executive</h3>
+              <span class="tl-company">Folium AI</span>
+              <span class="tl-date">Nov 2023 — Apr 2024</span>
+            </div>
+            <ul>
+              <li>Generated leads through LinkedIn and online job portals.</li>
+              <li>Performed market research to identify new business opportunities.</li>
+              <li>Built and executed lead-generation strategy alongside the team lead.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Business Development Executive</h3>
+              <span class="tl-company">Narsun Studios</span>
+              <span class="tl-date">Jul 2022 — Aug 2023</span>
+            </div>
+            <ul>
+              <li>Generated <strong>$30,000+</strong> in revenue through strategic lead generation.</li>
+              <li>Mentored and trained 2 interns, tracking progress with daily/weekly reports.</li>
+              <li>Delivered 100+ qualified leads per month at peak, from scraped multi-source data.</li>
+              <li>Recognized as <strong>Employee of the Month</strong> — January 2023.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Human Resources Intern</h3>
+              <span class="tl-company">University of Management and Technology</span>
+              <span class="tl-date">Feb 2022 — Mar 2022</span>
+            </div>
+            <ul>
+              <li>Managed email communication for the admissions department.</li>
+              <li>Handled inbound and outbound calls to resolve student inquiries.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACHIEVEMENTS ================= -->
+  <section class="spotlights">
+    <div class="wrap">
+      <h2 class="section-title reveal">🏅 Achievements</h2>
+      <p class="section-lede reveal">Numbers and recognition, not adjectives.</p>
+
+      <div class="spotlight-grid">
+        <div class="spotlight-card reveal">
+          <span class="spotlight-mark">🥇</span>
+          <p>Recognized as Employee of the Month for consistent lead generation and delivery.</p>
+          <div class="spotlight-foot"><span class="spotlight-name">Narsun Studios</span><span class="spotlight-role">January 2023</span></div>
+        </div>
+        <div class="spotlight-card reveal">
+          <span class="spotlight-mark">💰</span>
+          <p>Generated $90,000+ in revenue from Upwork using a single profile.</p>
+          <div class="spotlight-foot"><span class="spotlight-name">The Game Storm Studios</span><span class="spotlight-role">Apr 2024 — Jan 2025</span></div>
+        </div>
+        <div class="spotlight-card reveal">
+          <span class="spotlight-mark">📈</span>
+          <p>Closed $60,000+ via Upwork and generated 4 qualified LinkedIn leads in the current role.</p>
+          <div class="spotlight-foot"><span class="spotlight-name">Hubextech</span><span class="spotlight-role">Apr 2025 — Present</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2 class="section-title reveal">$ faq --help</h2>
+      <p class="section-lede reveal">What people usually ask before we start.</p>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>How fast can you get a stalled Upwork profile moving again?</span><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Usually within the first 2–3 weeks — profile and portfolio optimization first, then a tighter proposal framework tested against real response rates.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Do you only work with IT and gaming clients?</span><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>That's where most of my track record sits, but the outbound and closing process — research, outreach, negotiation, delivery — transfers to any service-based business.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>Can you manage the full sales cycle, or just lead gen?</span><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Full cycle — sourcing, proposal, negotiation, closing, and staying on as the client's point of contact through delivery.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q"><span>What's the best way to start a conversation?</span><span class="faq-toggle">+</span></button>
+          <div class="faq-a"><p>Email or a quick call — tell me the brief and current pipeline situation, and I'll tell you honestly whether I'm the right fit.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final-cta" id="contact">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <div class="cta-copy">
+          <p class="eyebrow">$ status --pending</p>
+          <h2>Let's get on a call.</h2>
+          <p class="cta-sub">Bring the brief, the pipeline, or just the problem — I'll tell you plainly whether I can move the needle.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:malikmuhammadnasir12@gmail.com" class="btn btn-solid-dark btn-lg">Email me ↘</a>
+          <a href="https://drive.google.com/drive/folders/1M3LeEhLqrl8HLosKtw8gy68Z3dIzZxoH?usp=sharing" target="_blank" rel="noopener" class="btn btn-line-dark btn-lg">Here's my CV ↗</a>
+        </div>
+        <div class="cta-details">
+          <a href="mailto:malikmuhammadnasir12@gmail.com">malikmuhammadnasir12@gmail.com</a>
+          <a href="tel:+923057932491">+92 305 7932491</a>
+          <a href="https://linkedin.com/in/muhammadnasirsaleem" target="_blank" rel="noopener">linkedin.com/in/muhammadnasirsaleem</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Muhammad Nasir Saleem</span>
+    <span class="footer-quote">🤝 "I don't chase leads. I close them."</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
